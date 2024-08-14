@@ -318,7 +318,7 @@ intrinsic Point(J::JacCrv, L::List)->JacCrvPt
 	return Pt;
 end intrinsic;
 
-intrinsic List(J::JacCrv)->List
+intrinsic IntegerList(J::JacCrv)->List
 {Turn a Jacobian into a list of integers.}
 	eqn := Equation(J`C);
 	coeffs_eqn := [ Eltseq(c) : c in Coefficients(eqn)];
@@ -337,7 +337,7 @@ intrinsic List(J::JacCrv)->List
 	return [* coeffs_eqn, monoms_eqn, coeffs_Bnum, monoms_Bnum, coeffs_Bden, monoms_Bden *];
 end intrinsic;
 
-intrinsic List(Pt::JacCrvPt)->List
+intrinsic IntegerList(Pt::JacCrvPt)->List
 {Turn a point on a Jacobian into a list of integers.}
 	I := Ideal(Pt);
 	B := Generators(I);

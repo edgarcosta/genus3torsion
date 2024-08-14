@@ -1669,9 +1669,9 @@ end function;
 
 intrinsic ConvertProofToList(J, T, ProofPrimes, ProofPoints)->List
 {Convert proof data to list for storage purposes.}
-	JL := List(J);
-	TL := [ List(Pt) : Pt in T ];
-	ProofPointsL := [ List(Pt) : Pt in ProofPoints ];
+	JL := IntegerList(J);
+	TL := [ IntegerList(Pt) : Pt in T ];
+	ProofPointsL := [ IntegerList(Pt) : Pt in ProofPoints ];
 	return [* JL, TL, ProofPrimes, ProofPointsL *];
 end intrinsic;
 
