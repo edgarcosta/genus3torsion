@@ -3,4 +3,5 @@
 	JacobianArithmetic.m
 	AnalyticJacobian.m
 	Torsion.m
+	utils.m
 }
